@@ -13,14 +13,14 @@
     password : Nnayeem12@1234
 
 ### Zustand 
-- **zustand store**: First time I use it ,Realy amazing
+- **zustand store**: First time I use it ,Really amazing
 
    1. https://dazzling-lolly-abb20e.netlify.app/mainPoint/6633068a2f79e468d8abde29
-   when I got to this page just change status , then back to 
+   when I go to this url just change status , then back to 
 
-   https://dazzling-lolly-abb20e.netlify.app/mainPoint this url and status will be change ,
+   https://dazzling-lolly-abb20e.netlify.app/mainPoint in this url and status will be change ,
 
-   why I do it , try to zustand , how i get value other  state .
+   why I do it , try to zustand , how I get value other  state .
 
 
 ###  Overview Page
