@@ -11,6 +11,7 @@ import { FaBuilding } from "react-icons/fa";
 import { TiHome } from "react-icons/ti";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import useStore from "../store";
 
 
 const iconsValue = [
@@ -39,10 +40,13 @@ const iconsValue = [
 function Sidebar() {
   const pathname = usePathname();
 
+  const {  toggleValue } = useStore();
+  console.log("pai ki na",toggleValue)
+
   return (
     <div>
       {" "}
-      {pathname == "/login" ? (
+      {pathname == "/login" || toggleValue ? (
         <div></div>
       ) : (
         <div className="pt-10  h-svh ">

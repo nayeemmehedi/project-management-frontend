@@ -3,21 +3,26 @@
 import React, { useState } from "react";
 
 import { FaBars, FaTimes } from "react-icons/fa";
+import useStore from "../store";
 
 function Navbar() {
-  const [isOpen, setIsOpen] = useState(false); // State to track whether the icon is open or closed
+
+  // This is ZuSTand Value  
+  const {  toggleValue, settoggleValue } = useStore();
+
+  console.log("projectStatus: ", JSON.stringify(toggleValue));
+  // const [isOpen, setIsOpen] = useState(false); // State to track whether the icon is open or closed
 
   const toggleIcon = () => {
-    setIsOpen(!isOpen); // Toggle the state
+    settoggleValue(!toggleValue) // Toggle the state
   };
 
   return (
     <div className="h-16 w-full bg-green-500 text-white ">
       <div className="flex justify-between items-center px-3">
-
         <div className=" hidden lg:block"></div>
         <div className="block lg:hidden ">
-          {isOpen ? (
+          {toggleValue ? (
             <FaTimes
               onClick={toggleIcon}
               className="text-gray-600 text-2xl cursor-pointer"
@@ -30,9 +35,7 @@ function Navbar() {
           )}
         </div>
         <div>
-          <p className="font-thin text-sm">
-            Project Management Dashboard
-          </p>
+          <p className="font-thin text-sm">Project Management Dashboard</p>
         </div>
       </div>
     </div>
