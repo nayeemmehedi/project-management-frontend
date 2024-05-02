@@ -23,7 +23,7 @@ const Login = () => {
     Cookies.set("authToken", value.data);
 
     setTimeout(() => {
-      window.location.href = `http://localhost:3000`;
+      window.location.href = `https://dazzling-lolly-abb20e.netlify.app`;
       
     }, 1500);
   };
