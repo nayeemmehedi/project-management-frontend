@@ -34,9 +34,18 @@
 
 ## Installation
 
-1. Clone the repository:
+1. Frontend repository:
    ```bash
-   git clone https://github.com/yourusername/project-management-dashboard.git
+     https://github.com/nayeemmehedi/project-management-frontend
+
+     https://dazzling-lolly-abb20e.netlify.app/
+
+
+1. Backend repository:
+   ```bash
+     https://github.com/nayeemmehedi/project-management-backend
+
+     https://project-management-backend-rqh3.onrender.com/
 
 
 

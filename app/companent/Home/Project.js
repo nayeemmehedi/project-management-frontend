@@ -1,6 +1,16 @@
+import { projectGet } from "@/app/Api/ProjectApi";
 import React from "react";
 
-function Project({ data }) {
+async function Project() {
+
+  const value = await projectGet();
+
+  if(!value) {
+    <div className="text-center">Loading ....</div>
+  }
+
+  const data = value?.data?.value
+
   return (
     <div>
       <p className="text-xl font-extralight ml-5 lg:ml-14 my-5">
