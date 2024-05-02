@@ -12,6 +12,17 @@
     email: boyneel79@gmail.com,
     password : Nnayeem12@1234
 
+### Zustand 
+- **zustand store**: First time I use it ,Realy amazing
+
+   1. https://dazzling-lolly-abb20e.netlify.app/mainPoint/6633068a2f79e468d8abde29
+   when I got to this page just change status , then back to 
+
+   https://dazzling-lolly-abb20e.netlify.app/mainPoint this url and status will be change ,
+
+   why I do it , try to zustand , how i get value other  state .
+
+
 ###  Overview Page
 - **There is just Demo design.
 - ** I use  Servier Side Rendering there  .
@@ -22,7 +33,7 @@
 
 
 ### Task Filters and Search Functionality
-- **Filter Tasks**: Allow users to filter tasks by status, due date, or assignee.
+- **Filter Tasks**: filter tasks by status, due date, or assignee.
 - **Search Bar**: Provide a search bar to quickly find tasks.
 
 ### Interactive Dashboard

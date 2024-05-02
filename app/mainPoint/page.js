@@ -1,7 +1,7 @@
 "use client";
 
 import Link from "next/link";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import { Button } from "antd";
 import AddTaskModal from "../companent/AddTaskModal";
 import SearchBar from "../companent/SearchBar";
@@ -15,6 +15,7 @@ import { deleteProjectid, projectGet } from "../Api/ProjectApi";
 import UpdateTaskModel from "../companent/UpdateTaskModel";
 import { queryClient } from "../queryClient";
 import useStore from "../store";
+import { api } from "../Api/MainFetch";
 
 const ListItem = [
   "Project Name",
@@ -69,6 +70,37 @@ export default function mainPoint() {
   const deleleItem = async (itemId) => {
     const value = await mutateAsync(itemId);
   };
+
+
+  // This is ZuSTand Value  
+  const { projectStatus, setProjectStatus } = useStore();
+
+  console.log("projectStatus: ", JSON.stringify(projectStatus));
+
+
+  useEffect(() => {
+    console.log("dhukse")
+
+    const updateStatus = async () => {
+      try {
+        const { id, status } = projectStatus;
+        const body = { status };
+        const response = await api.patch(`/project/${id}`, body);
+        console.log('Status updated successfully:', response.data);
+        if(response.data.statusCode == 200){
+          window.location.reload();
+        }
+      } catch (error) {
+        console.error('Error updating status:', error);
+      }
+    };
+
+    if (projectStatus.id) {
+      updateStatus();
+    }
+   
+  }, [projectStatus])
+  
 
 
   

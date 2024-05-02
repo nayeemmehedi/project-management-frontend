@@ -12,6 +12,7 @@ import { TiHome } from "react-icons/ti";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+
 const iconsValue = [
   {
     name: <TiHome className="w-6 h-4"></TiHome>,
@@ -27,6 +28,11 @@ const iconsValue = [
     name: <GiNetworkBars className="w-6 h-4"></GiNetworkBars>,
     value: "Employees",
     link: "/employee",
+  },
+  {
+    name: <BiExclude className="w-6 h-4"></BiExclude>,
+    value: "Log Out",
+    link: "/logout",
   },
 ];
 

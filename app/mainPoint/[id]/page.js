@@ -37,7 +37,7 @@ function MainPointDetails() {
 
   const handleStatusChange = (value) => {
     console.log("dd", value);
-    setProjectStatus(value); // Uncomment this line
+    setProjectStatus({id:id, status:value}); // Uncomment this line
   };
 
   if (isLoading || isPending) return <div>Loading...</div>;
